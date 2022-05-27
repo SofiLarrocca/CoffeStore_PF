@@ -1,0 +1,15 @@
+nav { 
+    background-color: rgba(34, 34, 30, 0.8);
+    box-shadow: 6px 10px 20px 0px rgba(26, 25, 25, 0.8);
+}
+
+img { 
+    max-width: 10rem;
+};
+
+
+@media screen and (min-width: 768px) {
+    img {
+      max-width: 15rem;
+    }
+  }

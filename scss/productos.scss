@@ -1,0 +1,113 @@
+.section_productos { 
+   padding-top: 10rem;
+   background-image: url("../img/marcas/fondo.jpg");
+
+   .filtro { 
+       display: block;
+       width: 70%;
+       margin: auto;
+       text-align: center;
+
+       p { 
+           font-size: 1.2rem;
+           margin: 0 1.5rem;
+           font-weight: 800;
+       }
+
+       select { 
+           border-radius: 15%;
+           padding: 0.5rem;
+       }
+   }
+
+   .container_productos { 
+    @include display(flex, center);
+    width: 95%;
+    margin: auto;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .producto_descripcion { 
+        text-align: center;
+        margin: 3rem 2rem;
+        background-color: #fff;
+        box-shadow: 6px 10px 20px 0px rgba(26, 25, 25, 0.8);;
+        padding: 0.5rem;
+
+        img { 
+            max-width: 10rem;
+        }
+
+        p { 
+            font-size: 1rem;
+
+            span { 
+                font-weight: 800;
+                font-size: 1.6rem;
+            }
+        }
+
+        button { 
+            @extend .btn
+        }
+    }
+   }
+
+   .container_text { 
+       @include display (flex, center);
+       margin-top: 2rem;
+       flex-wrap: wrap;
+       font-size: 1rem;
+       text-align: center;
+       font-weight: 800;
+       padding-bottom: 0.5rem;
+       
+       div { 
+           @include display (flex, center);          
+       }
+   }
+}
+
+img:hover { 
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+
+/* MEDIA QUERIES*/ 
+@media screen and (min-width: 900px) {
+   .section_productos { 
+       .filtro { 
+        display: flex;
+        justify-content: center;
+   }
+
+        .container_productos { 
+            width: 95%;
+
+            .producto_descripcion {
+            img { 
+                max-width: 18rem
+            }
+        }
+        }
+
+        .container_text { 
+            @include display (flex, center);
+            font-size: 1.2rem;
+            font-weight: 800;
+            padding-bottom: 1rem;
+            
+            div { 
+                @include display (flex, center);
+
+                p { 
+                    padding: 0.5rem;
+                }
+
+                
+            }
+        }
+        }
+}
+

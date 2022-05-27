@@ -1,0 +1,46 @@
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* VARIABLES */
+$background: rgb(61, 59, 59);
+$background_btn: rgb(194, 155, 97); 
+
+
+@mixin display($display, $justify) {
+    display: $display;
+    justify-content: $justify;
+};
+
+/* ESTILOS GENERALES */
+.container { 
+    width: 85%;
+    margin: auto;
+    @include display(flex, space-between);
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn { 
+    text-transform: uppercase;
+    background-color: $background_btn;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 25%;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    
+}
+
+/* ESTILOS PAGINAS */
+@import "header";
+@import "main";
+@import "nuestros_productos";
+@import "section_marcas";
+@import "footer";
+@import "productos";
+@import "contacto";
+@import "carrito";

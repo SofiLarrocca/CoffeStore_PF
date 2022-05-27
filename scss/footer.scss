@@ -1,0 +1,74 @@
+/* FOOTER*/ 
+footer { 
+    background-color: $background;
+    padding: 1rem 0;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+
+    p { 
+        padding: 0.1rem 0;
+    }
+
+    .container { 
+        @extend .container;
+        justify-content: center;
+        width: 100%;
+        vertical-align: middle;
+        margin: auto;
+    }
+
+    .footer__map--ubicacion { 
+        display: flex;
+
+        a { 
+            margin-right: 1rem;
+        }
+    }
+
+    .footer__right { 
+        text-align: center;
+    }
+        .redes { 
+            display: flex;
+            justify-content: center;
+        
+            .fa-brands { 
+                padding: 0 0.8rem;
+                font-size: 1.5rem;
+            }
+        }
+
+        /* MAP*/ 
+        $redes: (
+        facebook: #3b5998,
+        instagram: #f09433,
+        twitter: #00acee,
+        );
+
+        @each $redsocial, $color in $redes {
+            .fa-#{$redsocial}:hover { 
+                color: $color;
+                font-size: 2.5rem;
+    }
+}
+}
+
+@media screen and (min-width: 850px) { 
+    footer { 
+        font-size: 1.5rem;
+
+        p { 
+            padding: 0.5rem 0;
+        }
+
+        .container { 
+            justify-content: space-between;
+       
+        .fa-brands { 
+            padding: 0 0.8rem;
+            font-size: 2rem;
+            }
+        }
+    }
+}
